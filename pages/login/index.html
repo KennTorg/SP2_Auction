@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/dist/css/styles.css" />
+        
+        <script src="/src/js/index.mjs" defer type="module"></script>
+        <title>Social Media | Login</title>
+    </head>
+    <body class="bg-light">
+        <!--HEADER -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <!-- Nav -->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Logo</a>
+                    <!--Navbar-->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Nav collapse -->
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/pages/profile/">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/pages/login/">Login</a>
+                            </li>
+                          </ul>
+                      </div>
+                      <!-- Search -->
+                        <form class="d-flex">
+                            <!--Search input-->
+                            <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--LOGIN FORM -->
+        <div class="container card col-lg-4 shadow mt-5">
+            <form id="loginForm">
+                <!-- Email input -->
+                <div class="form-outline mb-4 pt-4">
+                    <input required name="email" type="email" id="email" class="form-control" />
+                    <label class="form-label" for="email">Email</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input required name="password" type="password" id="password" class="form-control" />
+                    <label class="form-label" for="password">Password</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                <!-- Register button -->
+                <div class="text-center">
+                    <p>Not a member yet? <a href="/pages/register">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

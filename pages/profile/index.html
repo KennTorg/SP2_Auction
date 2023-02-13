@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/dist/css/styles.css" />
+    
+        <script src="/src/js/index.mjs" defer type="module"></script>
+        <title>Social Media | Profile</title>
+    </head>
+    <body class="bg-light">
+        
+        <!-- HEADER -->
+        <header>
+            
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <!-- Navbar -->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Logo</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Navbar collapsed -->
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/profile/">Profile</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/login/">Login</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!--Search -->
+                        <form class="d-flex">
+                            <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- PROFILE MAIN -->
+        <main class="home-main">
+
+            <!-- SIDEBAR -->
+            <section class="row m-3">
+                <div class="col column-1 d-none d-md-block">
+                    <div class="p-3 bg-white shadow rounded min-vh-100 d-flex justify-content-center">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/pages/profile/">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/pages/login/">Login</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 column-2">
+                    <!-- Profile Image & banner -->
+                    <div class="card shadow">
+                        <!-- Banner -->
+                        <div class="bg-image rounded-top text-white d-flex flex-row" id="banner">
+                            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                                <!--Profile img -->
+                            <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" alt="" class="img-fluid rounded-circle mt-4 mb-2" style="width: 150px; z-index: 1;">
+                            
+                            </div>
+                            <!-- Username -->
+                            <div class="ms-3" style="margin-top: 130px;">
+                                <h4>Username Surname</h4>
+                            </div>
+                        </div>
+                        <!-- About user -->
+                        <div class="card-body m-4 text-black">
+                            <div class="mb-3">
+                                <h4 class="m-3">About</h4>
+                                <div class="p-3">
+                                  <p>Developer</p>
+                                  <p>Norway</p>
+                                  <p>Student</p>
+                                </div>
+                                <button type="button" class="btn btn-outline-dark" style="z-index:1;">Edit Profile</button>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- CREATE POST -->
+                <div class="col-md-6 column-2 mt-3 w-100">
+                     <div class="p-3 bg-white shadow rounded d-flex justify-content-center">
+                         <div class="post-container">
+
+                             <form id="createPost">
+                                <div class="form-group mb-3">
+                                    <label for="title">Title</label>
+                                     <input class="form-control" type="text" name="title" required>
+                                 </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="body">Body</label>
+                                    <textarea class="form-control" name="body" required></textarea>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="tags">Tags</label>
+                                    <input class="form-control" type="text" name="tags">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="media">Media</label>
+                                    <input class="form-control" type="url" name="media">
+                                </div>
+                
+                                <button class="btn btn-primary">Create Post</button>
+                            </form>
+                        </div>
+                    </div>
+                        <!-- POST FEED -->
+                        <div class="Feed flex-column bg-white shadow rounded mt-3">
+                            <div class="heading text-center">
+                                <h3 class="p-3">Feed</h3>
+                            </div>
+                            <div class="container-fluid" id="posts"></div>                      
+                        </div>
+                    </div>
+                </div>
+ 
+<!-- CONTACTS -->
+<div class="col column-3 d-none d-md-block">
+    <div class="p-3 bg-white shadow rounded min-vh-100 text-center">
+        <h3>Contacts</h3>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+        <div class="d-inline-flex p-2">
+            <div class="Friends">
+                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                </section>
+                <div class="container">
+                <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link px-2 text-muted">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/profile/" class="nav-link px-2 text-muted"
+                                >Profile</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/login/" class="nav-link px-2 text-muted"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="text-center text-muted">© 2022 KennTorg</p>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>
