@@ -58,39 +58,26 @@
             </nav>
         </header>
         <!-- PROFILE MAIN -->
-        <main class="home-main">
-
-            <!-- SIDEBAR -->
-            <section class="row m-3">
-                <div class="col column-1 d-none d-md-block">
-                    <div class="p-3 bg-white shadow rounded min-vh-100 d-flex justify-content-center">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/pages/profile/">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/pages/login/">Login</a>
-                            </li>
-                          </ul>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 column-2">
+        <main class="home-main">            
+                <div class="col-md-12 column-2">
                     <!-- Profile Image & banner -->
                     <div class="card shadow">
                         <!-- Banner -->
                         <div class="bg-image rounded-top text-white d-flex flex-row" id="banner">
                             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+
                                 <!--Profile img -->
-                            <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" alt="" class="img-fluid rounded-circle mt-4 mb-2" style="width: 150px; z-index: 1;">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="userAvatar" alt="" class="img-fluid rounded-circle mt-4 mb-2" style="width: 150px; z-index: 1;">
+                            
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Change Avatar
+                                </button>
                             
                             </div>
                             <!-- Username -->
                             <div class="ms-3" style="margin-top: 130px;">
-                                <h4>Username Surname</h4>
+                                <h4 id="userName">Username Surname</h4>
                             </div>
                         </div>
                         <!-- About user -->
@@ -98,11 +85,10 @@
                             <div class="mb-3">
                                 <h4 class="m-3">About</h4>
                                 <div class="p-3">
-                                  <p>Developer</p>
-                                  <p>Norway</p>
-                                  <p>Student</p>
+                                  <p id="userCredit">Credits</p>
+                                  <p id="userBids">Bids</p>
+                                  <p id="userNumberListings">Number of listings</p>
                                 </div>
-                                <button type="button" class="btn btn-outline-dark" style="z-index:1;">Edit Profile</button>
                               </div>
                         </div>
                     </div>
@@ -141,72 +127,58 @@
                             <div class="heading text-center">
                                 <h3 class="p-3">Feed</h3>
                             </div>
-                            <div class="container-fluid" id="posts"></div>                      
+                            <div class="container-fluid" id="profileListings"></div>                      
                         </div>
                     </div>
                 </div>
- 
-<!-- CONTACTS -->
-<div class="col column-3 d-none d-md-block">
-    <div class="p-3 bg-white shadow rounded min-vh-100 text-center">
-        <h3>Contacts</h3>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
+<!-- MODAL -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Place your avatar URL here</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center mt-5">
+                <label for="changeAvatar">Avatar</label>
+                <textarea class="form-control form-control-lg m-auto"
+                id="input-for-changeAvatar"
+                placeholder="Avatar URL"
+              ></textarea>
             </div>
         </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="changeAvatar" class="btn btn-primary" data-bs-dismiss="modal">Change Avatar</button>
         </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
-                </section>
+  </div>
+
+<!--  FOOTER   -->
                 <div class="container">
-                <footer class="py-3 my-4">
-                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link px-2 text-muted">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/pages/profile/" class="nav-link px-2 text-muted"
-                                >Profile</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a href="/pages/login/" class="nav-link px-2 text-muted"
-                                >Login</a
-                            >
-                        </li>
-                    </ul>
-                    <p class="text-center text-muted">© 2022 KennTorg</p>
+                    <footer class="py-3 my-4">
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link px-2 text-muted">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/pages/profile/" class="nav-link px-2 text-muted"
+                                    >Profile</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a href="/pages/login/" class="nav-link px-2 text-muted"
+                                    >Login</a
+                                >
+                            </li>
+                        </ul>
+                        <p class="text-center text-muted">© 2023 KennTorg</p>
                 </footer>
             </div>
         </main>
